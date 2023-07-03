@@ -1,0 +1,114 @@
+body{
+    height: 100vh; 
+    width: 100vw; /* si j'utilise pas la même valeur pour width et height ça va créer une ellipse visuelle quuan dearth tourne autour de sun, car hauteur et largeur ne seront pas réciproques*/
+    background-image: url('/img/pexels-felix-mittermeier-956999.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.system-container{
+    position: relative ;
+    margin : 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(40, 0, 82, 0.266);
+    background-position: center 40%;
+    background-repeat: no-repeat;
+}
+
+.sun{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border:1px solid white;
+    border-radius: 50%;
+    background-color: rgb(255, 200, 0);
+    box-shadow: 0 0 3em rgb(236, 136, 13);
+}
+
+.earth-system, #moon{
+   position: absolute;
+   border-color: white
+   transparent
+   transparent
+   transparent;
+   border-width: 0.1em 0.1em 0 0;
+   border-radius: 50%;
+   
+}
+
+.earth-system{
+    
+    top: 5em;
+    width: 1.4em;
+    height: 1.4em;
+    background-color: rgb(0, 174, 255);
+    animation: orbit 6.5s linear infinite;
+    transform-origin: 50% calc(50% + 535px); /* C'est le px qui determine le centrage par rapport au sun */
+    
+}
+
+#moon {
+    top: calc(50% - 8em); /* Ajustement verticale */
+    left: calc(50% - 4em); /* Ajustement  horizontale */
+    width: 8em;
+    height: 8em;
+    animation: orbit 2.7s linear infinite;
+    transform-origin: 50% 100%;
+   
+    
+}
+
+#moon::before {
+    content: "";  /* j'ai rajouté un texte vide pour agrandir la width de Moon */
+    position: absolute;
+    border-radius: 50%;
+    top: 5em; /* pour changer la distance terre luner */
+    right: 5em; /* pour changer la distance terre luner */
+    width: 0.5em;
+    height: 0.5em;
+    background-color: silver;
+
+}
+
+.wave {
+  position: fixed;
+  width: 0;
+  height: 0;
+  top: calc(50% - 0.5em);
+  left: calc(50% - 0.5em);
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 204, 0);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: waveAnimation 8s ease-out;
+  transform-origin: center;
+}
+
+
+
+    @keyframes orbit {
+        to {
+            transform: rotate(360deg);
+        
+        }
+    }
+
+    @keyframes waveAnimation {
+        0% {
+          transform: translate(-50%, -50%) scale(0);
+          opacity: 0.5;
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(10);
+          opacity: 0;
+        }
+      }
