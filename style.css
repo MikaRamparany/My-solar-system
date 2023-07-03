@@ -52,7 +52,7 @@ body{
     height: 1.4em;
     background-color: rgb(0, 174, 255);
     animation: orbit 6.5s linear infinite;
-    transform-origin: 50% calc(50% + 525px); /* C'est le px qui determine le centrage par rapport au sun */
+    transform-origin: 50% calc(50% + 500px); /* C'est le px qui determine le centrage par rapport au sun */
     
 }
 
