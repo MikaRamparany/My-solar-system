@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
 body{
+   font-family: 'Titillium', sans-serif, arial, helvetica;
     height: 100vh; 
     width: 100vw; /* si j'utilise pas la même valeur pour width et height ça va créer une ellipse visuelle quuan dearth tourne autour de sun, car hauteur et largeur ne seront pas réciproques*/
     background-image: url('img/pexels-felix-mittermeier-956999.jpg');
@@ -99,7 +103,7 @@ body{
 .earth-name {
     
     margin: 3em;
-    font-size: 16px;
+    font-size: 26px;
     font-weight: bold;
     color: white;
     pointer-events: none;
