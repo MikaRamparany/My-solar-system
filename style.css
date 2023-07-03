@@ -51,7 +51,7 @@ body{
     width: 1.4em;
     height: 1.4em;
     background-color: rgb(0, 174, 255);
-    animation: orbit 10s linear infinite;
+    animation: orbit 10s linear infinite; /* durée orbite de la terre autour du soleil 10s = 365*/
     transform-origin: 60% calc(50% + 500px); /* C'est le px qui determine le centrage par rapport au sun */
     
 }
@@ -61,7 +61,7 @@ body{
     left: calc(50% - 4em); /* Ajustement  horizontale */
     width: 8em;
     height: 8em;
-    animation: orbit 0.7945s linear infinite;
+    animation: orbit 0.7945s linear infinite; /* durée à echelle de 10sec de l'orbit de la lune autour de la terre*/
     transform-origin: 50% 100%;
    
     
@@ -93,6 +93,18 @@ body{
   transform-origin: center;
 }
 
+
+/* ajout css nom de la terre utile pour la fonction collision de JS*/
+
+.earth-name {
+    
+    margin: 3em;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    pointer-events: none;
+    animation: orbit 0.7945s linear infinite; 
+  }
 
 
     @keyframes orbit {
