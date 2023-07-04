@@ -55,8 +55,9 @@ body{
 }
 
 .earth-system{
-  background-image: url(/img/earth.jpeg);
+  background-image: url(/img/earth.jpg);
   background-size: contain;
+  background-repeat: no repeat;
     margin-left: -66rem;
     position: absolute;
     top: 5em;
