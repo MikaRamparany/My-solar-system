@@ -17,6 +17,7 @@ body{
 }
 
 .system-container{
+   
     margin : 0;
     height: 100%;
     width: 100%;
@@ -33,6 +34,9 @@ body{
     position: relative;
     width: 200px;
     height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border:1px solid rgb(234, 126, 32);
     border-radius: 50%;
     background-color: rgb(255, 200, 0);
@@ -51,7 +55,8 @@ body{
 }
 
 .earth-system{
-    
+    margin-left: -60rem;
+    position: absolute;
     top: 5em;
     width: 1.4em;
     height: 1.4em;
@@ -59,7 +64,7 @@ body{
     box-shadow: 0 0 3em rgb(155, 253, 225);
     border: 0.5px solid rgb(68, 204, 241);
     animation: orbit 10s linear infinite; /* durée orbite de la terre autour du soleil 10s = 365*/
-    transform-origin: 60% calc(50% + 500px); /* C'est le px qui determine le centrage par rapport au sun */
+    transform-origin: 530px calc(50%); /* C'est le px qui determine le centrage par rapport au sun */
     
 }
 
